@@ -1,0 +1,1 @@
+django-admin-model-action was created by Arthur Debert.

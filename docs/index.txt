@@ -1,0 +1,17 @@
+Welcome to django-admin-model-action's documentation!
+=========================================
+
+``django-admin-model-action`` is a reusable Django application designed to allow for models to have actions associated with them on Django's admin change view.
+
+.. toctree::
+   :maxdepth: 2
+
+   getting_started
+   issues
+   
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
