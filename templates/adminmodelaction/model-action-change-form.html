@@ -1,0 +1,16 @@
+{% extends "admin/change_form.html" %}
+
+{% block object-tools %}
+{{block.super}}
+  {% if original.pk and model_actions|length %}
+    <form action="." method="POST">
+       {% csrf_token %}
+    <div class="submit-row">
+      <input type='hidden' name="is_model_action" value="true"/>
+      {% for action in model_actions %}
+        <input class="viewsitelink"  type="submit" value="{{action.name}}" name="{{action.form_name}}">
+      {% endfor %}
+    </div>
+    </form>
+  {% endif %}
+{% endblock %}
