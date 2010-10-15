@@ -44,7 +44,7 @@ class ActionAdmin(admin.ModelAdmin):
     
     def __init__(self, model, admin_site):
         super(ActionAdmin, self).__init__(model, admin_site)
-        self.model_actions = [ModelAction(*action_options, model=model) for action_options in self.model_actions]
+        self.model_actions = [ModelAction(action_options, model=model) for action_options in self.model_actions]
 
     def get_model_actions_for(self, request, obj):
         return [action for action in self.model_actions if action.can_act_for ( request, obj)]
