@@ -29,7 +29,7 @@ class ModelAction(object):
         return True
 
     def do_action(self, request, obj):
-        msg =  self.action_method( obj, request)
+        msg =  self.action_method(request, obj)
         if msg is None:
             msg = "%s is done." % self.action_name
         messages.success(request, msg)    
