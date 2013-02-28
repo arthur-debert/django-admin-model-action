@@ -61,5 +61,5 @@ class ActionAdmin(admin.ModelAdmin):
                     action.do_action(request, obj)
             response = HttpResponseRedirect(request.path)
         else:
-            response =  super(ActionAdmin, self).change_view(request, object_id, extra_context)
+            response =  super(ActionAdmin, self).change_view(request, object_id, extra_context = extra_context)
         return response
